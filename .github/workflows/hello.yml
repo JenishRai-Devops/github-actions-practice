@@ -1,0 +1,21 @@
+
+name: My First CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Testing my application"
+
+      - name: Check files
+        run: ls -la
+
+      - name: Show current directory
+        run: pwd
